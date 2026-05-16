@@ -1,10 +1,10 @@
 ---
 name: my-skill
-description: "Descrição curta da skill"
+description: "Short skill description"
 version: 1.0
 ---
 
-# Nome da skill
+# [Skill Name]
 
 ## Descrição
 
