@@ -178,9 +178,7 @@ FASE 4 — Resumo final
 Paralelas: TASK-X e TASK-Y podem ser executadas simultaneamente.
 
 Referências de padrão:
-- docs/lgpd-consent-terms/SDD.md
-- docs/lgpd-cookie-consent/SDD.md
-- tasks nas pastas correspondentes
+- Use SDDs e tasks já existentes no projeto atual como referência de estrutura, quando disponíveis.
 ```
 
 ## Exemplos de entrada

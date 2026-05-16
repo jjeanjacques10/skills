@@ -6,15 +6,15 @@ version: 1.0
 
 # [Skill Name]
 
-## Descrição
+## Description
 
-Descreva rapidamente o que esta skill faz.
+Describe what this skill does in one short paragraph.
 
-## Objetivo
+## Goal
 
-Explique o resultado esperado após aplicar a skill.
+Explain the expected outcome after applying this skill.
 
-## Categoria
+## Category
 
 `development | design | productivity | others`
 
@@ -22,7 +22,7 @@ Explique o resultado esperado após aplicar a skill.
 
 `tag-1,tag-2,tag-3`
 
-## Ferramentas compatíveis
+## Compatible Tools
 
 - Claude
 - Claude Code
@@ -30,42 +30,42 @@ Explique o resultado esperado após aplicar a skill.
 - ChatGPT
 - Devin
 - Copilot
-- Outros
+- Others
 
-## Como usar
+## How to Use
 
-1. Explique o problema/contexto.
-2. Cole o prompt principal.
-3. Ajuste entradas e restrições.
-4. Revise a saída.
+1. Share the problem/context.
+2. Paste the main prompt.
+3. Adjust inputs and constraints.
+4. Review and refine the output.
 
-## Prompt principal
+## Main Prompt
 
 ```text
-<coloque aqui o prompt principal da skill>
+<paste the main reusable prompt here>
 ```
 
-## Exemplos de entrada
+## Input Examples
 
-- "Exemplo de contexto 1"
-- "Exemplo de contexto 2"
+- "Input example 1"
+- "Input example 2"
 
-## Exemplos de saída
+## Output Examples
 
-- "Exemplo de saída 1"
-- "Exemplo de saída 2"
+- "Output example 1"
+- "Output example 2"
 
-## Casos de uso
+## Use Cases
 
-- Caso 1
-- Caso 2
+- Use case 1
+- Use case 2
 
-## Limitações
+## Limitations
 
-- Limitação 1
-- Limitação 2
+- Limitation 1
+- Limitation 2
 
-## Boas práticas
+## Best Practices
 
-- Boa prática 1
-- Boa prática 2
+- Best practice 1
+- Best practice 2
