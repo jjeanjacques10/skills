@@ -53,9 +53,16 @@ Adicione skills somente nas categorias oficiais:
 - Separadas por vírgula
 - Ex.: `specification,planning,software-design,task-breakdown`
 
-## 6) Checklist de PR
+## 6) Idioma da skill
+
+- O repositório aceita skills em **Português** ou **Inglês**.
+- Cada `SKILL.md` deve manter **consistência interna** (não misturar idiomas nas seções principais).
+- Se possível, priorize versão em Inglês para compartilhamento internacional.
+
+## 7) Checklist de PR
 
 - [ ] Estrutura da skill está no padrão do repositório.
 - [ ] `SKILL.md` contém todos os campos obrigatórios.
 - [ ] Categoria e tags seguem convenções.
+- [ ] Idioma da skill está consistente (PT-BR ou EN).
 - [ ] README atualizado (quando necessário).
