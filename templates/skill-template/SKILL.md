@@ -1,71 +1,54 @@
 ---
 name: my-skill
-description: "Short skill description"
-version: 1.0
+description: Help with X workflow for Y context. Use when the user asks about X, mentions Y, or needs this recurring procedure.
 ---
 
-# [Skill Name]
+# My Skill
 
-## Description
+Use this skill to apply a focused, reusable workflow.
 
-Describe what this skill does in one short paragraph.
+## What this skill does
 
-## Goal
+Describe the outcome this skill is meant to produce.
 
-Explain the expected outcome after applying this skill.
+## When to use
 
-## Category
+- Use when the request matches the workflow described in `description`.
+- Use when the user needs a repeatable procedure instead of generic advice.
 
-`development | design | productivity | others`
+## When not to use
 
-## Tags
+- Do not use when a simpler direct answer is enough.
+- Do not use when another skill is clearly more specialized.
 
-`tag-1,tag-2,tag-3`
+## Inputs needed
 
-## Compatible Tools
+- Required context
+- Relevant files, URLs, or constraints
+- Expected output format
 
-- Claude
-- Claude Code
-- Cursor
-- ChatGPT
-- Devin
-- Copilot
-- Others
+## Procedure
 
-## How to Use
+1. Gather only the context needed to start.
+2. Check assumptions and constraints.
+3. Execute the workflow in a deterministic order.
+4. Validate the result before finishing.
 
-1. Share the problem/context.
-2. Paste the main prompt.
-3. Adjust inputs and constraints.
-4. Review and refine the output.
+## Validation
 
-## Main Prompt
+- The expected artifact exists.
+- The output matches the user's request.
+- Any checks or tests relevant to the workflow have been run.
 
-```text
-<paste the main reusable prompt here>
-```
+## Common failure modes
 
-## Input Examples
+- Missing context
+- Wrong assumptions
+- Skipping validation
 
-- "Input example 1"
-- "Input example 2"
+## Supporting files
 
-## Output Examples
-
-- "Output example 1"
-- "Output example 2"
-
-## Use Cases
-
-- Use case 1
-- Use case 2
-
-## Limitations
-
-- Limitation 1
-- Limitation 2
-
-## Best Practices
-
-- Best practice 1
-- Best practice 2
+- Put long guidance in `references/`
+- Put reusable artifacts in `templates/`
+- Put deterministic helpers in `scripts/`
+- Put static files in `assets/`

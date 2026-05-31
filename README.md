@@ -2,157 +2,101 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 ![Status](https://img.shields.io/badge/status-active-success)
-![Skills](https://img.shields.io/badge/skills-2-blue)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+![Skills](https://img.shields.io/badge/skills-1-blue)
+[![skills.sh](https://skills.sh/b/jjeanjacques10/skills)](https://skills.sh/jjeanjacques10/skills)
 
-Repositório open source para centralizar, reutilizar e compartilhar SKILLs/prompts estruturados para múltiplos agentes e ferramentas de IA.
+Repositório open source com skills reutilizáveis para agentes de IA, estruturado para instalação direta via `skills` CLI e descoberta no [skills.sh](https://www.skills.sh/).
 
----
+## Visão geral
 
-## 📚 Table of Contents
+Este repositório organiza skills por categoria para facilitar descoberta, manutenção e compartilhamento entre agentes como Claude Code, Codex, Cursor, Copilot e outros compatíveis com o padrão `SKILL.md`.
 
-- [Visão geral](#-visão-geral)
-- [Estrutura do repositório](#-estrutura-do-repositório)
-- [Skills disponíveis](#-skills-disponíveis)
-- [Como usar](#-como-usar)
-  - [Claude Code](#claude-code)
-  - [Cursor](#cursor)
-  - [ChatGPT](#chatgpt)
-  - [Devin](#devin)
-- [Convenções](#-convenções)
-- [Placeholders visuais](#-placeholders-visuais)
-- [Contribuição](#-contribuição)
-- [Licença](#-licença)
+O formato seguido aqui é o esperado pelo ecossistema `skills.sh`:
 
----
+- cada skill vive em uma pasta própria
+- cada skill possui `SKILL.md`
+- `SKILL.md` começa com YAML frontmatter contendo ao menos `name` e `description`
+- arquivos auxiliares podem ficar em `references/`, `templates/`, `scripts/` e `assets/`
 
-## 🚀 Visão geral
+## Instalação
 
-Este projeto organiza SKILLs por categoria para facilitar descoberta, manutenção e expansão contínua.
+Para listar as skills disponíveis neste repositório:
 
-Ferramentas alvo:
-- Claude
-- Claude Code
-- Devin
-- Cursor
-- ChatGPT
-- Windsurf
-- Copilot
-- Outras ferramentas compatíveis com prompts estruturados
+```bash
+npx skills add jjeanjacques10/skills --list
+```
 
----
+Para instalar uma skill específica:
 
-## 🗂 Estrutura do repositório
+```bash
+npx skills add jjeanjacques10/skills --skill spec-driven-build
+```
+
+Para instalar globalmente para seu agente:
+
+```bash
+npx skills add jjeanjacques10/skills --skill spec-driven-build -g -y
+```
+
+Também é possível instalar apontando para a URL completa do repositório:
+
+```bash
+npx skills add https://github.com/jjeanjacques10/skills --skill spec-driven-build
+```
+
+## Estrutura do repositório
 
 ```text
 /skills
   /development
-    /code-review
-    /architecture
-    /debugging
-    /refactoring
     /spec-driven-build
+      SKILL.md
+      /references
+      /templates
 
-  /design
-    /ui-ux
-    /branding
-    /landing-pages
-
-  /productivity
-    /documentation
-    /meeting-summary
-    /planning
-
-  /others
+/templates
+  /skill-template
+    SKILL.md
 ```
 
-Cada skill segue o padrão:
+Cada skill segue este padrão:
 
 ```text
 my-skill/
-├── SKILL.md          # obrigatório
-├── scripts/          # opcional
-├── references/       # opcional
-├── assets/           # opcional
-└── ...               # extensível
+├── SKILL.md
+├── references/
+├── templates/
+├── scripts/
+└── assets/
 ```
 
----
+## Skills disponíveis
 
-## 🧩 Skills disponíveis
+| Skill | Categoria | Descrição curta |
+|---|---|---|
+| [`spec-driven-build`](./skills/development/spec-driven-build/SKILL.md) | development | Orquestra PRD, SPEC e tasks com gates de qualidade e histórico por feature. |
 
-| Skill | Categoria | Compatibilidade | Descrição curta |
-|---|---|---|---|
-| [`spec-driven-build`](./skills/development/spec-driven-build/SKILL.md) | development | Claude, Claude Code, ChatGPT, Cursor, Devin, Copilot | Gera SDD detalhado e tasks granulares para correções/features. |
-| [`meeting-summary`](./skills/productivity/meeting-summary/SKILL.md) | productivity | Claude, Claude Code, ChatGPT, Cursor, Devin, Copilot | Estrutura notas de reunião em resumo com decisões e ações. |
+## Como usar sem CLI
 
----
-
-## 🛠 Como usar
-
-### Passo a passo geral
+Se preferir usar manualmente:
 
 1. Clone o repositório.
-2. Escolha uma skill na pasta `skills/`.
-3. Abra o arquivo `SKILL.md`.
-4. Copie o prompt/instruções.
-5. Use na ferramenta desejada.
-6. Customize para seu contexto.
+2. Abra a skill desejada em `skills/`.
+3. Leia o `SKILL.md`.
+4. Carregue os arquivos em `references/` e `templates/` quando a própria skill pedir.
 
-### Claude Code
+## Convenções
 
-```bash
-git clone https://github.com/jjeanjacques10/skills.git
-cd skills
-# Abra: skills/development/spec-driven-build/SKILL.md
-```
+- nomenclatura em `kebab-case`
+- frontmatter YAML obrigatório com `name` e `description`
+- descrição pensada como gatilho de ativação da skill
+- categorias oficiais: `development`, `design`, `productivity`, `others`
+- template base em [`templates/skill-template/SKILL.md`](./templates/skill-template/SKILL.md)
 
-Depois, copie o conteúdo de **Prompt principal** para o Claude Code.
+## Contribuição
 
-### Cursor
+Consulte [CONTRIBUTING.md](./CONTRIBUTING.md) para o padrão de estrutura, frontmatter e checklist de publicação.
 
-- Abra o repositório no Cursor.
-- Selecione uma skill e copie o prompt principal.
-- Cole no chat do agente e adapte ao ticket/issue.
-
-### ChatGPT
-
-- Abra a skill desejada (`SKILL.md`).
-- Copie o prompt principal e contexto.
-- Execute no ChatGPT com os dados do seu projeto.
-
-### Devin
-
-- Defina a tarefa no Devin.
-- Inclua o prompt da skill como instrução base.
-- Anexe arquivos/requisitos adicionais do projeto.
-
----
-
-## 🧭 Convenções
-
-- **Nomenclatura**: `kebab-case` (ex.: `spec-driven-build`).
-- **Tags padronizadas**: usar minúsculas, sem acentos, separadas por vírgula.
-- **Categorias oficiais**: `development`, `design`, `productivity`, `others`.
-- **Template**: use [`templates/skill-template/`](./templates/skill-template/) para novas skills.
-
----
-
-## 🖼 Placeholders visuais
-
-> As imagens/screenshot serão adicionadas depois.
-
-- `docs/images/placeholder-overview.png` *(placeholder)*
-- `docs/images/placeholder-skill-card.png` *(placeholder)*
-
----
-
-## 🤝 Contribuição
-
-Consulte [CONTRIBUTING.md](./CONTRIBUTING.md) para padrão de nomenclatura, estrutura obrigatória e checklist de submissão.
-
----
-
-## 📄 Licença
+## Licença
 
 Distribuído sob licença MIT. Veja [LICENSE](./LICENSE).

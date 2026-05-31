@@ -4,24 +4,56 @@ Obrigado por contribuir com o **AI Skills Repository**.
 
 ## 1) Estrutura obrigatória por skill
 
-Toda skill deve seguir:
+Toda skill publicada neste repositório deve seguir:
 
 ```text
 <nome-da-skill>/
 ├── SKILL.md
-├── scripts/      (opcional)
 ├── references/   (opcional)
+├── templates/    (opcional)
+├── scripts/      (opcional)
 ├── assets/       (opcional)
 └── ...           (opcional)
 ```
 
-## 2) Nomenclatura
+## 2) Compatibilidade com `skills.sh`
 
-- Pasta da skill em **kebab-case**.
-- Nome curto, descritivo e orientado ao resultado.
-- Exemplos: `spec-driven-build`, `meeting-summary`, `ui-audit`.
+O repositório é mantido para funcionar com o `skills` CLI e aparecer corretamente no `skills.sh`.
 
-## 3) Categorias
+Por isso, cada `SKILL.md` deve:
+
+- começar com YAML frontmatter válido
+- declarar `name`
+- declarar `description`
+- usar uma `description` que ajude o agente a decidir quando ativar a skill
+
+Exemplo mínimo:
+
+```yaml
+---
+name: my-skill
+description: Do X for Y projects. Use when the user asks about X or mentions Y.
+---
+```
+
+## 3) Nomenclatura
+
+- Pasta da skill em `kebab-case`
+- Nome curto, descritivo e orientado ao resultado
+- Exemplos: `spec-driven-build`, `meeting-summary`, `ui-audit`
+
+## 4) Corpo recomendado do `SKILL.md`
+
+O corpo em Markdown é livre, mas recomendamos esta estrutura:
+
+- o que a skill faz
+- quando usar e quando nao usar
+- entradas necessarias
+- procedimento passo a passo
+- validacao ou definicao de pronto
+- falhas comuns e como corrigir
+
+## 5) Categorias
 
 Adicione skills somente nas categorias oficiais:
 
@@ -30,39 +62,17 @@ Adicione skills somente nas categorias oficiais:
 - `skills/productivity/`
 - `skills/others/`
 
-## 4) Campos obrigatórios no SKILL.md
-
-- Nome da skill
-- Descrição
-- Objetivo
-- Categoria
-- Tags
-- Ferramentas compatíveis
-- Como usar
-- Prompt principal
-- Exemplos de entrada
-- Exemplos de saída
-- Casos de uso
-- Limitações
-- Boas práticas
-
-## 5) Tags padronizadas
-
-- Minúsculas
-- Sem acentuação
-- Separadas por vírgula
-- Ex.: `specification,planning,software-design,task-breakdown`
-
 ## 6) Idioma da skill
 
-- O repositório aceita skills em **Português** ou **Inglês**.
-- Cada `SKILL.md` deve manter **consistência interna** (não misturar idiomas nas seções principais).
-- Se possível, priorize versão em Inglês para compartilhamento internacional.
+- O repositório aceita skills em Português ou Inglês
+- Cada `SKILL.md` deve manter consistência interna
+- Se a skill for pública e ampla, prefira Inglês ou uma descrição claramente compreensível internacionalmente
 
 ## 7) Checklist de PR
 
-- [ ] Estrutura da skill está no padrão do repositório.
-- [ ] `SKILL.md` contém todos os campos obrigatórios.
-- [ ] Categoria e tags seguem convenções.
-- [ ] Idioma da skill está consistente (PT-BR ou EN).
-- [ ] README atualizado (quando necessário).
+- [ ] A skill segue a estrutura de pastas do repositório
+- [ ] O `SKILL.md` contém frontmatter YAML válido
+- [ ] O frontmatter possui `name` e `description`
+- [ ] A descrição funciona como gatilho de ativação
+- [ ] Links para `references/`, `templates/`, `scripts/` e `assets/` estão corretos
+- [ ] README atualizado quando necessário
