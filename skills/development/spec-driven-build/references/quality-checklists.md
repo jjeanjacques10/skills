@@ -11,11 +11,13 @@
 
 ## PRD checklist
 
-- [ ] O problema está claro
-- [ ] O objetivo é compreensível e testável
+- [ ] O contexto de produto está descrito (cenário atual e motivação)
+- [ ] O problema está claro e concreto
+- [ ] O objetivo é compreensível e observável
+- [ ] Há ao menos uma história de usuário no formato "Como / quero / para"
+- [ ] Cada história tem critérios de aceite verificáveis (sim/não ou mensuráveis)
 - [ ] O escopo diz o que entra e o que fica de fora
 - [ ] O fluxo esperado está descrito de forma simples
-- [ ] Os critérios de sucesso são observáveis
 - [ ] Não há excesso de detalhe técnico que deveria ir para a SPEC
 
 ## SPEC checklist
