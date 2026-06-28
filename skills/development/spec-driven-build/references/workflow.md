@@ -50,19 +50,23 @@ Esse documento deve ser curto, útil e reutilizável. Não incluir detalhes desc
 
 ### Objetivo
 
-Garantir um PRD enxuto, suficiente para seguir para a SPEC.
+Garantir que o usuário defina o problema, as histórias e os critérios de aceite antes de qualquer geração técnica.
 
 ### Procedimento
 
 1. Verificar se existe `docs/PRD.md`.
-2. Se não existir, criar a partir do template.
-3. Se existir, validar se está suficientemente preenchido.
-4. Se estiver vazio, ambíguo ou superficial, pedir apenas os complementos necessários.
-5. Não seguir para a SPEC enquanto o PRD não estiver minimamente utilizável.
+2. **Se não existir**: criar o arquivo copiando o template `prd-template.md` para `docs/PRD.md` — sem preencher o conteúdo.
+3. Informar o usuário: `"O template foi criado em docs/PRD.md. Preencha as seções marcadas com * e me avise quando estiver pronto para continuar."`
+4. **Pausar e aguardar** — não avançar até o usuário confirmar que preencheu.
+5. **Quando o usuário confirmar**: ler `docs/PRD.md` e validar usando o PRD checklist.
+6. Se estiver vazio, ambíguo ou faltando campos obrigatórios (`*`), apontar exatamente o que falta e pausar novamente.
+7. **Se existir e já estiver preenchido**: validar diretamente com o checklist e seguir ou pedir complementos.
+8. Emitir o relatório de qualidade do PRD antes de avançar para a Fase 3.
 
 ### Regra
 
-PRD descreve problema, objetivo, escopo, fluxo esperado e critérios de sucesso. Detalhe técnico fica para a SPEC.
+PRD descreve problema, histórias de usuário, critérios de aceite, escopo e fluxo esperado. Detalhe técnico fica para a SPEC.
+Nunca preencher o PRD em nome do usuário — o template é ponto de partida, não output gerado.
 
 ## Fase 3 — Histórico por feature
 
@@ -104,9 +108,10 @@ Não gerar SPEC genérica ou desacoplada do projeto atual.
 
 1. Validar a SPEC usando o checklist próprio.
 2. Corrigir inconsistências antes de perguntar ao usuário.
-3. Emitir o relatório de qualidade da SPEC.
-4. Apresentar um resumo curto e perguntar: `A SPEC está correta? Posso gerar as tasks?`
-5. Permitir iterações até ficar 100%.
+3. Verificar que cada critério de aceite do PRD tem cobertura na SPEC (requisito funcional ou critério de aceite técnico correspondente).
+4. Emitir o relatório de qualidade da SPEC.
+5. Apresentar um resumo curto e perguntar: `A SPEC está correta? Posso gerar as tasks?`
+6. Permitir iterações até ficar 100%.
 
 ### Critérios mínimos de aprovação
 
